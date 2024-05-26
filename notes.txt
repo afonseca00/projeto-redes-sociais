@@ -1,3 +1,4 @@
+1ªParte
 Definição de posição
 - para ser mais facil defenimos backgrounds
 - defenimos que um tem a posição absoluta e o outro a posição relativa
@@ -48,3 +49,80 @@ Subestituir o backgroud main para o body e por uma imagem
 - metemos alinhamento ao top centro
 - backgroud-size: cover; para cobrir o ecra inteiro
 - background-attachment: fixed; para não rolar
+
+
+2ªParte
+Criei uma arquivo home para guardar o home do ecra
+EXEMPLO:
+    <style>
+        * {
+            margin: 0px; 
+            padding: 0px;
+        } (para estar com o tamanho todo do ecrã)
+
+        body {
+            width: 100vw; (largura toda)
+            height: 100vh; (altura toda)
+            background: black url('imagens/tela-home.jpg') no-repeat top center;
+            background-size: cover; (para cobrir o espaço)
+        }
+</style>
+
+Tive que criar um iframe para guardar essa imagem
+EXEMPLO:
+<section id="telemovel">
+            <iframe src="home.html" name="ecra" id="ecra" frameborder="0"></iframe>
+</section>
+
+Tive que dimenssionar e alinhar
+EXEMPLO:
+iframe#ecra {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 267px;
+    height: 471px;
+}
+
+
+
+3ªParte
+Criar os botões para as redes sociais
+EXEMPLO:
+<section id="redes-sociais">
+            <a href="#" target="ecra"><img src="imagens/logo-home.jpg" alt=""></a><br>
+            <a href="#" target="ecra"><img src="imagens/logo-youtube.jpg" alt=""></a><br>
+            <a href="#" target="ecra"><img src="imagens/logo-github.jpg" alt=""></a><br>
+            <a href="#" target="ecra"><img src="imagens/logo-instagram.jpg" alt=""></a><br>
+            <a href="#" target="ecra"><img src="imagens/logo-twitter.jpg" alt=""></a><br>
+            <a href="#" target="ecra"><img src="imagens/logo-facebook.jpg" alt=""></a><br>
+        </section>
+
+comecei por alinha a direita
+EXEMPLO:
+section#redes-sociais {
+    text-align: right;
+}
+
+Dei lhes um tamanho, a forma redonda, sombra e metios a borda a fazer parte do objeto
+EXEMPLO:
+section#redes-sociais > a > img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
+    box-sizing: border-box;
+}
+
+Por ultimo fiz os efeito quando se passa com o rato por cima
+- bordas
+- mexer se
+- sombras
+- abrandei o movimento 
+EXEMPLO:
+section#redes-sociais > a > img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.637);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.600);
+    transition: transform 0.3s;
+}
