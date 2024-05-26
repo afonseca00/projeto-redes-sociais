@@ -1,0 +1,50 @@
+Definição de posição
+- para ser mais facil defenimos backgrounds
+- defenimos que um tem a posição absoluta e o outro a posição relativa
+- background total queremos heigth de 100 vw para ocupar a altura toda
+- o outro queremos defenir um tamanho
+- depois dizer que esta a 50% do topo e 50% de left
+- fica com o canto alinhado ao centro 
+- entao temos que usar o transform: translate(-50%, -50%);
+
+EXEMPLO:
+main{
+    position: relative;
+    height: 100vh;
+    background-color: green;
+}
+
+section#telemovel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 500px;
+    background-color: blue;
+}
+
+
+Subestituir o backgroud-color por uma imagem
+- tiramos o backgroud-color
+- metemos um bacgroud: url(***)
+- e metemos no-repeat a frente para nao repetir a imagem
+- depois calibramos o tamanho segundo o tamanho da imagem
+EXEMPLO:
+section#telemovel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 627px;
+    width: 311px;
+    background: url(../imagens/frame-iphone.png) no-repeat;
+}
+
+Subestituir o backgroud main para o body e por uma imagem
+- tiramos o backgroud-color
+- metemos um bacgroud: url(***)
+- e metemos no-repeat a frente para nao repetir a imagem
+- metemos alinhamento ao top centro
+- backgroud-size: cover; para cobrir o ecra inteiro
+- background-attachment: fixed; para não rolar
